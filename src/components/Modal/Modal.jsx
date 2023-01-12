@@ -8,7 +8,7 @@ export const Modal = ({ img, escFunction, closeModal }) => {
     return () => {
       document.removeEventListener('keydown', escFunction, false);
     };
-  }, []);
+  }, [escFunction]);
 
   return (
     <div className="Overlay" onClick={closeModal} onKeyDown={escFunction}>
